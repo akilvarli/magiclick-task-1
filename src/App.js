@@ -1,3 +1,4 @@
+import React from 'react';
 import "./App.css";
 import CurrencyConverter from "./components/currency-converter/currency-converter.component";
 import CurrencyButtonContainer from "./components/CurrencyButton/currency-button.component";
