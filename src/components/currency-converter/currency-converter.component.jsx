@@ -11,9 +11,9 @@ import {
 const CurrencyConverter = () => {
   const [initialState, setState] = useState({
     currencies: ["TRY", "USD", "EUR", "GBP", "JPY", "DKK", "NOK"],
-    base: "TRY",
+    base: "USD",
     amount: "",
-    convertTo: "USD",
+    convertTo: "TRY",
     result: "",
     date: "",
   });

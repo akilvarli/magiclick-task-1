@@ -13,6 +13,9 @@ export const MarketsContainer = styled.div`
 
 export const ConvertCurrencyCard = styled.div`
   display: flex;
+  border-bottom: 1px solid rgba(186, 201, 213, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
   .flag {
     width: 44px;
     height: 30px;
@@ -48,13 +51,12 @@ export const ConvertCurrencyCard = styled.div`
   }
   .d-block {
     width: 86px;
-    margin-left:10px;
-    span {
+    margin-left: 10px;
+    .curr {
       text-align: right;
     }
   }
-
   .give {
-    margin-left:20px;
+    margin-left: 20px;
   }
 `;
