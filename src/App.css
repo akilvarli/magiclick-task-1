@@ -11,6 +11,13 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
@@ -44,6 +51,10 @@ h1 {
   padding: 0;
 }
 
+.col-md-5 {
+  width: unset;
+}
+
 .bottom-card {
   border:0 !important;
   padding-bottom: 0 !important;
@@ -59,7 +70,12 @@ h1 {
   margin-left: 74px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
 
   h1 {
     font-size: 22px;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutButton = styled.button`
-  width: 352px;
+  width: 345px;
   height: 48px;
   display: flex;
   justify-content: center;
@@ -19,10 +19,14 @@ export const AboutButton = styled.button`
     color: #2b3b48;
     border: 1px solid #2b3b48;
   }
+  @media (max-width: 768px) {
+   margin-top:26px;
+    }
+  }
 `;
 
 export const CustomButton = styled.button`
-  width: 352px;
+  width: 345px;
   height: 48px;
   display: flex;
   justify-content: center;

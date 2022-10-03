@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  ConvertCurrencyCard,
-  MarketsContainer,
-} from "./markets.styles";
+import { ConvertCurrencyCard, MarketsContainer } from "./markets.styles";
 import UsdFlag from "../../images/usd-flag.png";
 import JapanFlag from "../../images/japan-flag.png";
 import EnglandFlag from "../../images/england-flag.png";
@@ -58,122 +55,125 @@ const Markets = () => {
   }, [amount, base, convertTo, date]);
 
   return (
-    <MarketsContainer className="row">
-      <ConvertCurrencyCard className="col-md-5">
-        <div className="card-mini d-inline-flex">
-          <div className="flag">
-            <img src={UsdFlag} alt="" />
+    <>
+      <h1 className="text-md-center text-lg-left text-sm-center">Piyasalar</h1>
+      <MarketsContainer className="row">
+        <ConvertCurrencyCard className="col-md-5">
+          <div className="card-mini d-inline-flex">
+            <div className="flag">
+              <img src={UsdFlag} alt="" />
+            </div>
+            <div className="d-block">
+              <h5>USD</h5>
+              <span>Amerikan Doları</span>
+            </div>
+          </div>
+          <div className="d-block give">
+            <span className="curr">ALIŞ</span>
+            <h6>{usd.toString().substring(0, 7)}</h6>
           </div>
           <div className="d-block">
-            <h5>USD</h5>
-            <span>Amerikan Doları</span>
+            <span className="curr">SATIŞ</span>
+            <h6>{usd.toString().substring(0, 7)}</h6>
           </div>
-        </div>
-        <div className="d-block give">
-          <span className="curr">ALIŞ</span>
-          <h6>{usd.toString().substring(0, 7)}</h6>
-        </div>
-        <div className="d-block">
-          <span className="curr">SATIŞ</span>
-          <h6>{usd.toString().substring(0, 7)}</h6>
-        </div>
-      </ConvertCurrencyCard>
-      <ConvertCurrencyCard className="col-md-5 right-card">
-        <div className="card-mini d-inline-flex">
-          <div className="flag">
-            <img src={EuropeFlag} alt="" />
+        </ConvertCurrencyCard>
+        <ConvertCurrencyCard className="col-md-5 right-card">
+          <div className="card-mini d-inline-flex">
+            <div className="flag">
+              <img src={EuropeFlag} alt="" />
+            </div>
+            <div className="d-block">
+              <h5>EUR</h5>
+              <span style={{ width: "99px" }}>Avrupa Para Birimi</span>
+            </div>
           </div>
-          <div className="d-block">
-            <h5>EUR</h5>
-            <span style={{ width: "99px" }}>Avrupa Para Birimi</span>
-          </div>
-        </div>
-        <div className="d-block give">
-          <span className="curr">ALIŞ</span>
-          <h6>{eur.toString().substring(0, 7)}</h6>
-        </div>
-        <div className="d-block">
-          <span className="curr">SATIŞ</span>
-          <h6>{eur.toString().substring(0, 7)}</h6>
-        </div>
-      </ConvertCurrencyCard>
-      <ConvertCurrencyCard className="col-md-5 ">
-        <div className="card-mini d-inline-flex">
-          <div className="flag">
-            <img src={JapanFlag} alt="" />
+          <div className="d-block give">
+            <span className="curr">ALIŞ</span>
+            <h6>{eur.toString().substring(0, 7)}</h6>
           </div>
           <div className="d-block">
-            <h5>JPY</h5>
-            <span>Japon Yeni</span>
+            <span className="curr">SATIŞ</span>
+            <h6>{eur.toString().substring(0, 7)}</h6>
           </div>
-        </div>
-        <div className="d-block give">
-          <span className="curr">ALIŞ</span>
-          <h6>{jpy.toString().substring(0, 7)}</h6>
-        </div>
-        <div className="d-block">
-          <span className="curr">SATIŞ</span>
-          <h6>{jpy.toString().substring(0, 7)}</h6>
-        </div>
-      </ConvertCurrencyCard>
-      <ConvertCurrencyCard className="col-md-5 right-card">
-        <div className="card-mini d-inline-flex">
-          <div className="flag">
-            <img src={EnglandFlag} alt="" />
+        </ConvertCurrencyCard>
+        <ConvertCurrencyCard className="col-md-5 ">
+          <div className="card-mini d-inline-flex">
+            <div className="flag">
+              <img src={JapanFlag} alt="" />
+            </div>
+            <div className="d-block">
+              <h5>JPY</h5>
+              <span>Japon Yeni</span>
+            </div>
           </div>
-          <div className="d-block">
-            <h5>GBP</h5>
-            <span>İngiliz Sterlini</span>
-          </div>
-        </div>
-        <div className="d-block give">
-          <span className="curr">ALIŞ</span>
-          <h6>{gbp.toString().substring(0, 7)}</h6>
-        </div>
-        <div className="d-block">
-          <span className="curr">SATIŞ</span>
-          <h6>{gbp.toString().substring(0, 7)}</h6>
-        </div>
-      </ConvertCurrencyCard>
-      <ConvertCurrencyCard className="col-md-5 bottom-card">
-        <div className="card-mini d-inline-flex">
-          <div className="flag">
-            <img src={DenmarkFlag} alt="" />
+          <div className="d-block give">
+            <span className="curr">ALIŞ</span>
+            <h6>{jpy.toString().substring(0, 7)}</h6>
           </div>
           <div className="d-block">
-            <h5>DKK</h5>
-            <span style={{ width: "99px" }}>Danimarka Konu</span>
+            <span className="curr">SATIŞ</span>
+            <h6>{jpy.toString().substring(0, 7)}</h6>
           </div>
-        </div>
-        <div className="d-block give">
-          <span className="curr">ALIŞ</span>
-          <h6>{dkk.toString().substring(0, 7)}</h6>
-        </div>
-        <div className="d-block">
-          <span className="curr">SATIŞ</span>
-          <h6>{dkk.toString().substring(0, 7)}</h6>
-        </div>
-      </ConvertCurrencyCard>
-      <ConvertCurrencyCard className="col-md-5 bottom-card-right">
-        <div className="card-mini d-inline-flex">
-          <div className="flag">
-            <img src={NorwayFlag} alt="" />
+        </ConvertCurrencyCard>
+        <ConvertCurrencyCard className="col-md-5 right-card">
+          <div className="card-mini d-inline-flex">
+            <div className="flag">
+              <img src={EnglandFlag} alt="" />
+            </div>
+            <div className="d-block">
+              <h5>GBP</h5>
+              <span>İngiliz Sterlini</span>
+            </div>
+          </div>
+          <div className="d-block give">
+            <span className="curr">ALIŞ</span>
+            <h6>{gbp.toString().substring(0, 7)}</h6>
           </div>
           <div className="d-block">
-            <h5>NOK</h5>
-            <span>Norveç Konu</span>
+            <span className="curr">SATIŞ</span>
+            <h6>{gbp.toString().substring(0, 7)}</h6>
           </div>
-        </div>
-        <div className="d-block give">
-          <span className="curr">ALIŞ</span>
-          <h6>{nok.toString().substring(0, 7)}</h6>
-        </div>
-        <div className="d-block">
-          <span className="curr">SATIŞ</span>
-          <h6>{nok.toString().substring(0, 7)}</h6>
-        </div>
-      </ConvertCurrencyCard>
-    </MarketsContainer>
+        </ConvertCurrencyCard>
+        <ConvertCurrencyCard className="col-md-5 bottom-card">
+          <div className="card-mini d-inline-flex">
+            <div className="flag">
+              <img src={DenmarkFlag} alt="" />
+            </div>
+            <div className="d-block">
+              <h5>DKK</h5>
+              <span style={{ width: "99px" }}>Danimarka Konu</span>
+            </div>
+          </div>
+          <div className="d-block give">
+            <span className="curr">ALIŞ</span>
+            <h6>{dkk.toString().substring(0, 7)}</h6>
+          </div>
+          <div className="d-block">
+            <span className="curr">SATIŞ</span>
+            <h6>{dkk.toString().substring(0, 7)}</h6>
+          </div>
+        </ConvertCurrencyCard>
+        <ConvertCurrencyCard className="col-md-5 bottom-card-right">
+          <div className="card-mini d-inline-flex">
+            <div className="flag">
+              <img src={NorwayFlag} alt="" />
+            </div>
+            <div className="d-block">
+              <h5>NOK</h5>
+              <span>Norveç Konu</span>
+            </div>
+          </div>
+          <div className="d-block give">
+            <span className="curr">ALIŞ</span>
+            <h6>{nok.toString().substring(0, 7)}</h6>
+          </div>
+          <div className="d-block">
+            <span className="curr">SATIŞ</span>
+            <h6>{nok.toString().substring(0, 7)}</h6>
+          </div>
+        </ConvertCurrencyCard>
+      </MarketsContainer>
+    </>
   );
 };
 

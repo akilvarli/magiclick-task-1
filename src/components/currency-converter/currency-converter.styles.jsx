@@ -19,6 +19,12 @@ export const CurrencyConverterContainer = styled.div`
     padding: 21px 24px 24px;
     background-image: linear-gradient(146deg, #2b3b48 34%, #8093a5 110%);
   }
+
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+    padding: 21px 24px 24px;
+    background-image: linear-gradient(146deg, #2b3b48 34%, #8093a5 110%);
+  }
 `;
 
 export const ConvertToForm = styled.form`
@@ -42,18 +48,16 @@ export const ConvertToForm = styled.form`
     width: 297px;
     height: 48px;
     margin: 27px 0 19px;
-    
+
     input {
       width: 211px;
       border: none;
       outline: none;
     }
     h4 {
-      font-size:20px;
+      font-size: 20px;
     }
   }
-  
-  
 `;
 
 export const SelectBox = styled.div`
@@ -81,6 +85,7 @@ export const SelectBox = styled.div`
       calc(100% - 0px) calc(0.5em + 2px), 100% 0;
     background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
     background-repeat: no-repeat;
+    background-color: transparent;
   }
 `;
 
